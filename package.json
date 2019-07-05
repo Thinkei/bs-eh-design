@@ -1,0 +1,34 @@
+{
+  "name": "bs-eh-design",
+  "version": "0.0.1",
+  "description": "Bucklescript bindings for Employment Hero Design Kit",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thinkei/bs-eh-design"
+  },
+  "keywords": [
+    "uikit",
+    "reasonml",
+    "bucklescript"
+  ],
+  "license": "MIT",
+  "author": "Employment Hero",
+  "bugs": {
+    "url": "https://github.com/Thinkei/bs-eh-design/issues"
+  },
+  "homepage": "https://github.com/Thinkei/bs-eh-design#README",
+  "scripts": {
+    "start": "bsb -clean -make-world -w",
+    "dev": "parcel ./examples/index.html"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.6",
+    "bsb-js": "^1.1.7",
+    "parcel-bundler": "^1.12.3",
+    "reason-react": "^0.7.0"
+  },
+  "dependencies": {
+    "eh-antd": "git+ssh://git@github.com/Thinkei/eh-ant-design.git#master"
+  }
+}
