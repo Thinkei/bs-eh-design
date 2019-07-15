@@ -23,12 +23,16 @@
     "dev": "parcel ./examples/index.html"
   },
   "devDependencies": {
+    "bs-css": "^9.0.1",
     "bs-platform": "^5.0.6",
     "bsb-js": "^1.1.7",
+    "cssnano": "^4.1.10",
+    "indexof": "0.0.1",
+    "less": "^3.9.0",
     "parcel-bundler": "^1.12.3",
     "reason-react": "^0.7.0"
   },
   "dependencies": {
-    "eh-antd": "git+ssh://git@github.com/Thinkei/eh-ant-design.git#master"
+    "@ehrocks/eh-ant-design": "1.0.0-alpha.01"
   }
 }
