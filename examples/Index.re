@@ -67,6 +67,7 @@ module App = {
           theme=`outlined
         />
       </Section>
+      <RadioExample />
     </div>;
 };
 
