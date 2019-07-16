@@ -7,6 +7,8 @@ module Styles = {
 
 let str = ReasonReact.string;
 
+open Ehd;
+
 module App = {
   [@react.component]
   let make = () =>
@@ -18,19 +20,25 @@ module App = {
         </Ehd.Badge>
       </Section>
       <Section title="Buttons">
-        <Ehd.Button
-          loading={Ehd.Button.LoadingProp.Bool(true)} _type=`primary>
+        <Button loading={Button.LoadingProp.Bool(true)} _type=`primary>
           {str("Button 1")}
-        </Ehd.Button>
-        <Ehd.Button
+        </Button>
+        <Button
           onClick={_ => Js.log("you are at danger")}
           _type=`danger
           size=`large>
           {str("Button 2")}
-        </Ehd.Button>
-        <Ehd.Button _type=`link size=`xlarge icon=`search>
+        </Button>
+        <Button _type=`link size=`xlarge icon=`search>
           {str("Button 3")}
-        </Ehd.Button>
+        </Button>
+        <br />
+        <Button.ButtonGroup focusStyle=`trafficLights>
+          <Button focusColorInGroup=`primary> {str("All")} </Button>
+          <Button focusColorInGroup=`yellow> {str("Pending")} </Button>
+          <Button focusColorInGroup=`green> {str("Accepted")} </Button>
+          <Button focusColorInGroup=`pink> {str("Declined")} </Button>
+        </Button.ButtonGroup>
       </Section>
     </div>;
 };

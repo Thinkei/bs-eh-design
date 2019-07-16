@@ -4,10 +4,27 @@ module LoadingProp = {
     | Bool(bool): t(bool)
     | Delay(int): t(delay);
 
-  let toJs: type a. t(a) => a =
+  let tToJs: type a. t(a) => a =
     fun
     | Bool(value) => value
     | Delay(value) => {"delay": value};
+};
+
+module ButtonGroup = {
+  [@bs.scope "Button"]
+  [@bs.module "@ehrocks/eh-ant-design/lib"]
+  [@react.component]
+  external make:
+    (
+      ~focusStyle: [@bs.string] [
+                     | `outlined
+                     | [@bs.as "traffic-lights"] `trafficLights
+                   ]
+                     =?,
+      ~children: React.element
+    ) =>
+    React.element =
+    "ButtonGroup";
 };
 
 module External = {
@@ -35,6 +52,8 @@ module External = {
                 =?,
       ~onClick: ReactEvent.Mouse.t => unit=?,
       ~block: bool=?,
+      ~focusColorInGroup: [@bs.string] [ | `primary | `yellow | `green | `pink]
+                            =?,
       ~children: React.element
     ) =>
     React.element =
@@ -57,6 +76,7 @@ let make =
       ~_type=?,
       ~onClick=?,
       ~block=?,
+      ~focusColorInGroup=?,
       ~children,
     ) =>
   <External
@@ -66,12 +86,13 @@ let make =
     ?htmlType
     icon=?{Belt.Option.map(icon, Ehd_IconName.tToJs)}
     ?outlinedIcon
-    loading=?{Belt.Option.map(loading, LoadingProp.toJs)}
+    loading=?{Belt.Option.map(loading, LoadingProp.tToJs)}
     ?shape
     ?size
     ?target
     ?_type
     ?onClick
-    ?block>
+    ?block
+    ?focusColorInGroup>
     children
   </External>;
