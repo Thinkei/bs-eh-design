@@ -80,6 +80,14 @@ module App = {
           _type=`dashboard
         />
       </Section>
+      <Section title="Tooltip">
+        <Tooltip
+          placement=`top title={ReasonReact.string("3 done / 3 in progress")}>
+          <span>
+            {ReasonReact.string("Tooltip will show on mouse enter.")}
+          </span>
+        </Tooltip>
+      </Section>
     </div>;
 };
 
