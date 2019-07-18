@@ -82,24 +82,79 @@ module App = {
       </Section>
       <Section title="Tooltip">
         <Tooltip
-          placement=`top title={ReasonReact.string("3 done / 3 in progress")}>
+          placement=`top title={str("3 done / 3 in progress")}>
           <span>
-            {ReasonReact.string("Tooltip will show on mouse enter.")}
+            {str("Tooltip will show on mouse enter.")}
           </span>
         </Tooltip>
       </Section>
       <Section title="Typography">
-        <Typography.Title level=`h3>
-          {ReasonReact.string("This is a title")}
+        <Typography.Title level=3>
+          {str("This is a title")}
         </Typography.Title>
         <Typography.Paragraph code=true>
-          {ReasonReact.string(
+          {str(
              {|
 Js.log('Hello ReasonML World');
 Js.log('Byebye ... World');
           |},
            )}
         </Typography.Paragraph>
+      </Section>
+      <Section title="Cards">
+        <Card
+          title="Default size card"
+          extra={<a href="#"> {str("More")} </a>}
+          style={ReactDOMRe.Style.make(~width="300px", ())}>
+          <p> {str("Card content 1")} </p>
+          <p> {str("Card content 2")} </p>
+          <p> {str("Card content 3")} </p>
+        </Card>
+      </Section>
+      <Section title="Alerts">
+        <Alert
+          style={ReactDOMRe.Style.make(~width="200px", ())}
+          message={str("You shall not pass")}
+          _type=`warning
+          closable=true
+          onClose={_ => Js.log("Close")}
+        />
+        <Alert
+          style={ReactDOMRe.Style.make(~width="200px", ())}
+          message={str("You shall pass")}
+          _type=`success
+        />
+      </Section>
+      <Section title="Messages">
+        <Button
+          onClick={_ =>
+            Message.(
+              call(Uncontrolled(`error, str("WTH? You clicked me!"), None))
+            )
+          }
+          _type=`danger
+          size=`large>
+          {str("Uncontrolled message")}
+        </Button>
+        <br />
+        <br />
+        <Button
+          onClick={_ => {
+            open Message;
+            call(Controlled(`error, str("WTH? You clicked me!"), 2., None))
+            |> Js.Promise.then_(_ => {
+                 call(
+                   Uncontrolled(`info, str("I won't disappear :D"), None),
+                 );
+                 Js.Promise.resolve();
+               })
+            |> ignore;
+            ();
+          }}
+          _type=`danger
+          size=`large>
+          {str("Controlled message")}
+        </Button>
       </Section>
     </div>;
 };
