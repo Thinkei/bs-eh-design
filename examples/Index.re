@@ -82,18 +82,18 @@ module App = {
       </Section>
       <Section title="Tooltip">
         <Tooltip
-          placement=`top title={ReasonReact.string("3 done / 3 in progress")}>
+          placement=`top title={str("3 done / 3 in progress")}>
           <span>
-            {ReasonReact.string("Tooltip will show on mouse enter.")}
+            {str("Tooltip will show on mouse enter.")}
           </span>
         </Tooltip>
       </Section>
       <Section title="Typography">
         <Typography.Title level=3>
-          {ReasonReact.string("This is a title")}
+          {str("This is a title")}
         </Typography.Title>
         <Typography.Paragraph code=true>
-          {ReasonReact.string(
+          {str(
              {|
 Js.log('Hello ReasonML World');
 Js.log('Byebye ... World');
@@ -104,11 +104,11 @@ Js.log('Byebye ... World');
       <Section title="Cards">
         <Card
           title="Default size card"
-          extra={<a href="#"> {ReasonReact.string("More")} </a>}
+          extra={<a href="#"> {str("More")} </a>}
           style={ReactDOMRe.Style.make(~width="300px", ())}>
-          <p> {ReasonReact.string("Card content 1")} </p>
-          <p> {ReasonReact.string("Card content 2")} </p>
-          <p> {ReasonReact.string("Card content 3")} </p>
+          <p> {str("Card content 1")} </p>
+          <p> {str("Card content 2")} </p>
+          <p> {str("Card content 3")} </p>
         </Card>
       </Section>
       <Section title="Alerts">
@@ -134,8 +134,10 @@ Js.log('Byebye ... World');
           }
           _type=`danger
           size=`large>
-          {str("Click me to see a message")}
+          {str("Uncontrolled message")}
         </Button>
+        <br />
+        <br />
         <Button
           onClick={_ => {
             open Message;
@@ -151,7 +153,7 @@ Js.log('Byebye ... World');
           }}
           _type=`danger
           size=`large>
-          {str("Click me to see a message")}
+          {str("Controlled message")}
         </Button>
       </Section>
     </div>;
