@@ -88,6 +88,19 @@ module App = {
           </span>
         </Tooltip>
       </Section>
+      <Section title="Typography">
+        <Typography.Title level=`h3>
+          {ReasonReact.string("This is a title")}
+        </Typography.Title>
+        <Typography.Paragraph code=true>
+          {ReasonReact.string(
+             {|
+Js.log('Hello ReasonML World');
+Js.log('Byebye ... World');
+          |},
+           )}
+        </Typography.Paragraph>
+      </Section>
     </div>;
 };
 
