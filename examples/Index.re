@@ -111,12 +111,49 @@ Js.log('Byebye ... World');
           <p> {ReasonReact.string("Card content 3")} </p>
         </Card>
       </Section>
-      <Alert
-        message={str("You shall not pass")}
-        _type=`warning
-        closable=true
-        onClose={_ => Js.log("Close")}
-      />
+      <Section title="Alerts">
+        <Alert
+          style={ReactDOMRe.Style.make(~width="200px", ())}
+          message={str("You shall not pass")}
+          _type=`warning
+          closable=true
+          onClose={_ => Js.log("Close")}
+        />
+        <Alert
+          style={ReactDOMRe.Style.make(~width="200px", ())}
+          message={str("You shall pass")}
+          _type=`success
+        />
+      </Section>
+      <Section title="Messages">
+        <Button
+          onClick={_ =>
+            Message.(
+              call(Uncontrolled(`error, str("WTH? You clicked me!"), None))
+            )
+          }
+          _type=`danger
+          size=`large>
+          {str("Click me to see a message")}
+        </Button>
+        <Button
+          onClick={_ => {
+            open Message;
+            call(Controlled(`error, str("WTH? You clicked me!"), 2., None))
+            |> Js.Promise.then_(_ => {
+                 call(
+                   Uncontrolled(`info, str("I won't disappear :D"), None),
+                 );
+                 Js.Promise.resolve();
+               })
+            |> ignore;
+            ();
+          }}
+          _type=`danger
+          size=`large>
+          {str("Click me to see a message")}
+        </Button>
+      </Section>
     </div>;
 };
 
