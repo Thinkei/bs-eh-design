@@ -89,7 +89,7 @@ module App = {
         </Tooltip>
       </Section>
       <Section title="Typography">
-        <Typography.Title level=`h3>
+        <Typography.Title level=3>
           {ReasonReact.string("This is a title")}
         </Typography.Title>
         <Typography.Paragraph code=true>
@@ -111,11 +111,10 @@ Js.log('Byebye ... World');
           <p> {ReasonReact.string("Card content 3")} </p>
         </Card>
       </Section>
-
       <Alert
         message={str("You shall not pass")}
         _type=`warning
-        closable={true}
+        closable=true
         onClose={_ => Js.log("Close")}
       />
     </div>;

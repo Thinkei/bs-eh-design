@@ -104,13 +104,7 @@ module Title = {
         ~disabled: bool=?,
         ~editable: 'b=?,
         ~ellipsis: bool=?,
-        ~level: [@bs.string] [
-                  | [@bs.as "1"] `h1
-                  | [@bs.as "2"] `h2
-                  | [@bs.as "3"] `h3
-                  | [@bs.as "4"] `h4
-                ]
-                  =?,
+        ~level: int =?,
         ~mark: bool=?,
         ~underline: bool=?,
         ~onChange: string => unit=?,
@@ -148,8 +142,9 @@ module Title = {
       ?mark
       ?underline
       ?onChange
-      ?_type
-    >{children}</External>;
+      ?_type>
+      children
+    </External>;
 };
 
 module Paragraph = {
@@ -197,6 +192,7 @@ module Paragraph = {
       ?mark
       ?underline
       ?onChange
-      ?_type
-    >{children}</External>;
+      ?_type>
+      children
+    </External>;
 };
