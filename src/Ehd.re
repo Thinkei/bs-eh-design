@@ -3,3 +3,6 @@ module Button = Ehd_Button;
 module IconName = Ehd_IconName;
 module Icon = Ehd_Icon;
 module Radio = Ehd_Radio;
+module Progress = Ehd_Progress;
+module Tooltip = Ehd_Tooltip;
+module Typography = Ehd_Typography;

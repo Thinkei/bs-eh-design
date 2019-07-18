@@ -68,6 +68,39 @@ module App = {
         />
       </Section>
       <RadioExample />
+      <Section title="Progress">
+        <Progress percent=75. status=`active />
+        <Progress percent=70. status=`error />
+        <Progress
+          format={(percent, _successPercent) =>
+            Js.Float.toString(percent) ++ " days"
+          }
+          percent=60.
+          successPercent=30.
+          _type=`dashboard
+        />
+      </Section>
+      <Section title="Tooltip">
+        <Tooltip
+          placement=`top title={ReasonReact.string("3 done / 3 in progress")}>
+          <span>
+            {ReasonReact.string("Tooltip will show on mouse enter.")}
+          </span>
+        </Tooltip>
+      </Section>
+      <Section title="Typography">
+        <Typography.Title level=`h3>
+          {ReasonReact.string("This is a title")}
+        </Typography.Title>
+        <Typography.Paragraph code=true>
+          {ReasonReact.string(
+             {|
+Js.log('Hello ReasonML World');
+Js.log('Byebye ... World');
+          |},
+           )}
+        </Typography.Paragraph>
+      </Section>
     </div>;
 };
 
