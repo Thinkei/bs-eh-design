@@ -111,6 +111,13 @@ Js.log('Byebye ... World');
           <p> {ReasonReact.string("Card content 3")} </p>
         </Card>
       </Section>
+
+      <Alert
+        message={str("You shall not pass")}
+        _type=`warning
+        closable={true}
+        onClose={_ => Js.log("Close")}
+      />
     </div>;
 };
 

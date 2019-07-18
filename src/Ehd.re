@@ -7,3 +7,4 @@ module Progress = Ehd_Progress;
 module Tooltip = Ehd_Tooltip;
 module Typography = Ehd_Typography;
 module Card = Ehd_Card;
+module Alert = Ehd_Alert;
