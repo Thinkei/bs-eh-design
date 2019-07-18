@@ -101,6 +101,16 @@ Js.log('Byebye ... World');
            )}
         </Typography.Paragraph>
       </Section>
+      <Section title="Cards">
+        <Card
+          title="Default size card"
+          extra={<a href="#"> {ReasonReact.string("More")} </a>}
+          style={ReactDOMRe.Style.make(~width="300px", ())}>
+          <p> {ReasonReact.string("Card content 1")} </p>
+          <p> {ReasonReact.string("Card content 2")} </p>
+          <p> {ReasonReact.string("Card content 3")} </p>
+        </Card>
+      </Section>
     </div>;
 };
 
