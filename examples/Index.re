@@ -169,6 +169,9 @@ Js.log('Byebye ... World');
           placeholder="Password"
         />
       </Section>
+      <Section title="Empty">
+        <Empty> <Button> {str("Create")} </Button> </Empty>
+      </Section>
     </div>;
 };
 

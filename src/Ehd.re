@@ -10,3 +10,4 @@ module Card = Ehd_Card;
 module Alert = Ehd_Alert;
 module Message = Ehd_Message;
 module Input = Ehd_Input;
+module Empty = Ehd_Empty;
