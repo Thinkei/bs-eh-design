@@ -81,11 +81,8 @@ module App = {
         />
       </Section>
       <Section title="Tooltip">
-        <Tooltip
-          placement=`top title={str("3 done / 3 in progress")}>
-          <span>
-            {str("Tooltip will show on mouse enter.")}
-          </span>
+        <Tooltip placement=`top title={str("3 done / 3 in progress")}>
+          <span> {str("Tooltip will show on mouse enter.")} </span>
         </Tooltip>
       </Section>
       <Section title="Typography">
@@ -155,6 +152,22 @@ Js.log('Byebye ... World');
           size=`large>
           {str("Controlled message")}
         </Button>
+      </Section>
+      <Section title="Inputs">
+        <Input
+          style={ReactDOMRe.Style.make(~height="28px", ())}
+          placeholder="Simple input"
+        />
+        <br />
+        <br />
+        <Input.TextArea
+          style={ReactDOMRe.Style.make(~height="100px", ())}
+          placeholder="Text area"
+        />
+        <Input.Password
+          style={ReactDOMRe.Style.make(~height="28px", ())}
+          placeholder="Password"
+        />
       </Section>
     </div>;
 };
