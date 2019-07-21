@@ -33,6 +33,7 @@ module App = {
       <SelectExample />
       <NotificationExample />
       <InputNumberExample />
+      <LayoutExample />
     </div>;
 };
 
