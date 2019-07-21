@@ -5,7 +5,7 @@ let str = ReasonReact.string;
 [@react.component]
 let make = () => {
   let (value, setValue) = React.useState(() => "A");
-  <Section title="Radios">
+  <Section title="Radio">
     <Radio.Group
       defaultValue="A"
       name="test"
