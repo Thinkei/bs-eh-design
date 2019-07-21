@@ -3,7 +3,6 @@ open Ehd;
 let str = ReasonReact.string;
 
 module Option = Select.Option;
-module OptGroup = Select.OptGroup;
 
 [@react.component]
 let make = () => {
