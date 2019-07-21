@@ -2,8 +2,6 @@ open Ehd;
 
 let str = ReasonReact.string;
 
-module Option = Select.Option;
-
 [@react.component]
 let make = () => {
   <Section title="Notification">
