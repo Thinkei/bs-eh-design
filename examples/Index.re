@@ -190,6 +190,9 @@ Js.log('Byebye ... World');
       </Section>
       <TagExample />
       <TabsExample />
+      <br />
+      <br />
+      <SelectExample />
     </div>;
 };
 
