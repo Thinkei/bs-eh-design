@@ -19,7 +19,7 @@ module App = {
           {str("Unread notifications")}
         </Ehd.Badge>
       </Section>
-      <Section title="Buttons">
+      <Section title="Button">
         <Button loading={Button.LoadingProp.Bool(true)} _type=`primary>
           {str("Button 1")}
         </Button>
@@ -40,7 +40,7 @@ module App = {
           <Button focusColorInGroup=`pink> {str("Declined")} </Button>
         </Button.ButtonGroup>
       </Section>
-      <Section title="Icons">
+      <Section title="Icon">
         <Icon
           style={ReactDOMRe.Style.make(
             ~width="100px",
@@ -98,7 +98,7 @@ Js.log('Byebye ... World');
            )}
         </Typography.Paragraph>
       </Section>
-      <Section title="Cards">
+      <Section title="Card">
         <Card
           title="Default size card"
           extra={<a href="#"> {str("More")} </a>}
@@ -108,7 +108,7 @@ Js.log('Byebye ... World');
           <p> {str("Card content 3")} </p>
         </Card>
       </Section>
-      <Section title="Alerts">
+      <Section title="Alert">
         <Alert
           style={ReactDOMRe.Style.make(~width="200px", ())}
           message={str("You shall not pass")}
@@ -122,7 +122,7 @@ Js.log('Byebye ... World');
           _type=`success
         />
       </Section>
-      <Section title="Messages">
+      <Section title="Message">
         <Button
           onClick={_ =>
             Message.(
@@ -153,7 +153,7 @@ Js.log('Byebye ... World');
           {str("Controlled message")}
         </Button>
       </Section>
-      <Section title="Inputs">
+      <Section title="Input">
         <Input
           style={ReactDOMRe.Style.make(~height="28px", ())}
           placeholder="Simple input"
@@ -172,6 +172,7 @@ Js.log('Byebye ... World');
       <Section title="Empty">
         <Empty> <Button> {str("Create")} </Button> </Empty>
       </Section>
+      <CheckboxExample />
     </div>;
 };
 
