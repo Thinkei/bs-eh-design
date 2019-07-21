@@ -12,3 +12,4 @@ module Message = Ehd_Message;
 module Input = Ehd_Input;
 module Empty = Ehd_Empty;
 module Checkbox = Ehd_Checkbox;
+module Switch = Ehd_Switch;

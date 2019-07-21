@@ -173,6 +173,21 @@ Js.log('Byebye ... World');
         <Empty> <Button> {str("Create")} </Button> </Empty>
       </Section>
       <CheckboxExample />
+      <Section title="Switch">
+        <Switch
+          checkedChildren={str("Yes")}
+          unCheckedChildren={str("No")}
+          defaultChecked=true
+        />
+        <br />
+        <br />
+        <Switch
+          size=`small
+          checkedChildren={str("1")}
+          unCheckedChildren={str("0")}
+          defaultChecked=true
+        />
+      </Section>
     </div>;
 };
 
