@@ -188,6 +188,11 @@ Js.log('Byebye ... World');
           defaultChecked=true
         />
       </Section>
+      <TagExample />
+      <TabsExample />
+      <br />
+      <br />
+      <SelectExample />
     </div>;
 };
 
