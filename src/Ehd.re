@@ -18,3 +18,6 @@ module Tabs = Ehd_Tabs;
 module Select = Ehd_Select;
 module Notification = Ehd_Notification;
 module InputNumber = Ehd_InputNumber;
+module Layout = Ehd_Layout;
+module Col = Ehd_Col;
+module Row = Ehd_Row;
