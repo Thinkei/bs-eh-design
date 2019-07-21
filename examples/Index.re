@@ -193,6 +193,7 @@ Js.log('Byebye ... World');
       <br />
       <br />
       <SelectExample />
+      <NotificationExample />
     </div>;
 };
 
