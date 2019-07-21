@@ -189,6 +189,7 @@ Js.log('Byebye ... World');
         />
       </Section>
       <TagExample />
+      <TabsExample />
     </div>;
 };
 

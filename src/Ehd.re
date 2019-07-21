@@ -14,3 +14,4 @@ module Empty = Ehd_Empty;
 module Checkbox = Ehd_Checkbox;
 module Switch = Ehd_Switch;
 module Tag = Ehd_Tag;
+module Tabs = Ehd_Tabs;
