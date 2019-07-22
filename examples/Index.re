@@ -35,6 +35,7 @@ module App = {
       <InputNumberExample />
       <LayoutExample />
       <RowAndColExample />
+      <ModalExample />
     </div>;
 };
 
