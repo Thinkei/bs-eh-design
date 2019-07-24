@@ -33,6 +33,6 @@
     "reason-react": "^0.7.0"
   },
   "dependencies": {
-    "@ehrocks/eh-ant-design": "0.0.1-alpha.2"
+    "@ehrocks/eh-ant-design": "0.0.1-alpha.4"
   }
 }
