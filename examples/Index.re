@@ -1,4 +1,4 @@
-[%bs.raw {|require("@ehrocks/eh-ant-design/styles/eh-antd.css")|}];
+[%bs.raw {|require("@ehrocks/eh-ant-design/styles/eh-ant-design.css")|}];
 
 module Styles = {
   open Css;
@@ -35,6 +35,9 @@ module App = {
       <InputNumberExample />
       <LayoutExample />
       <RowAndColExample />
+      <ModalExample />
+      <SpinExample />
+      <SkeletonExample />
     </div>;
 };
 
