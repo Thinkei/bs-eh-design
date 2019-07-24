@@ -36,6 +36,7 @@ module App = {
       <LayoutExample />
       <RowAndColExample />
       <ModalExample />
+      <SpinExample />
     </div>;
 };
 

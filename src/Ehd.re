@@ -17,11 +17,13 @@ module Progress = Ehd_Progress;
 module Radio = Ehd_Radio;
 module Select = Ehd_Select;
 /* module Skeleton = Ehd_Skeleton; */
+module Spin = Ehd_Spin;
 module Switch = Ehd_Switch;
 module Tabs = Ehd_Tabs;
 module Tag = Ehd_Tag;
 module Tooltip = Ehd_Tooltip;
 module Typography = Ehd_Typography;
+/* module Upload = Ehd_Upload; */
 
 /* Layout */
 module Col = Ehd_Col;
