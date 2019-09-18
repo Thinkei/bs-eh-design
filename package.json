@@ -1,6 +1,6 @@
 {
   "name": "bs-eh-design",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bucklescript bindings for Employment Hero Design Kit",
   "main": "index.js",
   "repository": {
@@ -33,6 +33,6 @@
     "reason-react": "^0.7.0"
   },
   "dependencies": {
-    "@ehrocks/eh-ant-design": "1.0.0-alpha.2"
+    "@ehrocks/eh-ant-design": "1.0.0-alpha.3"
   }
 }
