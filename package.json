@@ -1,6 +1,6 @@
 {
   "name": "bs-eh-design",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Bucklescript bindings for Employment Hero Design Kit",
   "main": "index.js",
   "repository": {

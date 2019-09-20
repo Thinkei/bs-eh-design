@@ -53,6 +53,7 @@ module Text = {
         ~onChange: string => unit=?,
         ~strong: bool=?,
         ~_type: [@bs.string] [ | `secondary | `warning | `danger]=?,
+        ~style: ReactDOMRe.Style.t=?,
         ~children: React.element
       ) =>
       React.element =
@@ -73,6 +74,7 @@ module Text = {
         ~onChange=?,
         ~strong=?,
         ~_type=?,
+        ~style=?,
         ~children,
       ) =>
     <External
@@ -86,6 +88,7 @@ module Text = {
       ?underline
       ?onChange
       ?strong
+      ?style
       ?_type>
       children
     </External>;
@@ -109,6 +112,7 @@ module Title = {
         ~underline: bool=?,
         ~onChange: string => unit=?,
         ~_type: [@bs.string] [ | `secondary | `warning | `danger]=?,
+        ~style: ReactDOMRe.Style.t=?,
         ~children: React.element
       ) =>
       React.element =
@@ -129,6 +133,7 @@ module Title = {
         ~underline=?,
         ~onChange=?,
         ~_type=?,
+        ~style=?,
         ~children,
       ) =>
     <External
@@ -142,6 +147,7 @@ module Title = {
       ?mark
       ?underline
       ?onChange
+      ?style
       ?_type>
       children
     </External>;
@@ -163,6 +169,7 @@ module Paragraph = {
         ~underline: bool=?,
         ~onChange: string => unit=?,
         ~_type: [@bs.string] [ | `secondary | `warning | `danger]=?,
+        ~style: ReactDOMRe.Style.t=?,
         ~children: React.element
       ) =>
       React.element =
@@ -181,6 +188,7 @@ module Paragraph = {
         ~underline=?,
         ~onChange=?,
         ~_type=?,
+        ~style=?,
         ~children,
       ) =>
     <External
@@ -192,6 +200,7 @@ module Paragraph = {
       ?mark
       ?underline
       ?onChange
+      ?style
       ?_type>
       children
     </External>;
